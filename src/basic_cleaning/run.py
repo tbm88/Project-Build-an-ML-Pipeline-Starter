@@ -56,44 +56,44 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="A very basic data cleaning")
   
     parser.add_argument(
-        "--input_artifact", 
-        type = ## INSERT TYPE HERE: str, float or int,
-        help = ## INSERT DESCRIPTION HERE,
+        "--input_artifact",
+        type = str,
+        help = "Fully-qualified name for the W&B input artifact (raw data) to be cleaned",
         required = True
     )
 
     parser.add_argument(
-        "--output_artifact", 
-        type = ## INSERT TYPE HERE: str, float or int,
-        help = ## INSERT DESCRIPTION HERE,
+        "--output_artifact",
+        type = str,
+        help = "Name for the W&B output artifact that will contain the cleaned data",
         required = True
     )
 
     parser.add_argument(
-        "--output_type", 
-        type = ## INSERT TYPE HERE: str, float or int,
-        help = ## INSERT DESCRIPTION HERE,
+        "--output_type",
+        type = str,
+        help = "Type to assign to the output artifact (e.g. clean_sample)",
         required = True
     )
 
     parser.add_argument(
-        "--output_description", 
-        type = ## INSERT TYPE HERE: str, float or int,
-        help = ## INSERT DESCRIPTION HERE,
+        "--output_description",
+        type = str,
+        help = "A brief description of the output artifact",
         required = True
     )
 
     parser.add_argument(
-        "--min_price", 
-        type = ## INSERT TYPE HERE: str, float or int,
-        help = ## INSERT DESCRIPTION HERE,
+        "--min_price",
+        type = float,
+        help = "Minimum price to consider valid; rows below this are considered outliers and dropped",
         required = True
     )
 
     parser.add_argument(
         "--max_price",
-        type = ## INSERT TYPE HERE: str, float or int,
-        help = ## INSERT DESCRIPTION HERE,
+        type = float,
+        help = "Maximum price to consider valid; rows above this are considered outliers and dropped",
         required = True
     )
 
